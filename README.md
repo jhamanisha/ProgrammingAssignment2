@@ -1,65 +1,67 @@
-# Working Example:
-# Take a variable 'y' and assign a square matrix to it.
-> y <- matrix(c(1, 2, 3, 4), nrow = 2, ncol = 2, byrow = TRUE)
+# Working Example
 
-# Print y to check its values
-> y
-     [,1] [,2]
-[1,]    1    2
-[2,]    3    4
+        ## Take a variable 'y' and assign a square matrix to it.
+                > y <- matrix(c(1, 2, 3, 4), nrow = 2, ncol = 2, byrow = TRUE)
 
-# Now call the 'makeCacheMatrix' function by passing the above variable 'y' to it, and store the result in another variable called 'p'
-> p <- makeCacheMatrix(y)
+        ## Print y to check its values
+                > y
 
-# Print p to check its values. It should provide the user with all the operations available
-> p
+                        #>      [,1] [,2]
+                        #> [1,]    1    2
+                        #> [2,]    3    4
 
-$setMatrix
-function (y) 
-{
-    x <- y
-    cache <- NULL
-}
-<environment: 0x0000000027a27b60>
+        ## Now call the 'makeCacheMatrix' function by passing the above variable 'y' to it, and store the result in another variable called 'p'
+                > p <- makeCacheMatrix(y)
 
-$getMatrix
-function () 
-{
-    x
-}
-<environment: 0x0000000027a27b60>
+        ## Print p to check its values. It should provide the user with all the operations available
+                > p
 
-$cacheInverseMatrix
-function (x) 
-{
-    cache <- solve(x)
-}
-<environment: 0x0000000027a27b60>
+                        $setMatrix
+                        function (y) 
+                        {
+                                x <- y
+                                cache <- NULL
+                        }
+                        <environment: 0x0000000027a27b60>
 
-$getCacheInverseMatrix
-function () 
-{
-    cache
-}
-<environment: 0x0000000027a27b60>
+                        $getMatrix
+                        function () 
+                        {
+                                x
+                        }
+                        <environment: 0x0000000027a27b60>
 
-# Now call the getMatrix sub-function of makeCacheMatrix function
-> p$getMatrix()
+                        $cacheInverseMatrix
+                        function (x) 
+                        {
+                                cache <- solve(x)
+                        }
+                        <environment: 0x0000000027a27b60>
 
-     [,1] [,2]
-[1,]    1    2
-[2,]    3    4
+                        $getCacheInverseMatrix
+                        function () 
+                        {
+                                cache
+                        }
+                        <environment: 0x0000000027a27b60>
 
-# Now call the second function 'cacheSolve' that will calculate the inverse of the example matrix using function 'makeCacheMatrix'.
-> cacheSolve(p)
+        ## Now call the getMatrix sub-function of makeCacheMatrix function
+                > p$getMatrix()
 
-     [,1] [,2]
-[1,] -2.0  1.0
-[2,]  1.5 -0.5
+                #>      [,1] [,2]
+                #> [1,]    1    2
+                #> [2,]    3    4
 
-# To check if the values have been calculated correctly, compare the result by directly inverting the example matrix
-> solve(y)
+        ## Now call the second function 'cacheSolve' that will calculate the inverse of the example matrix using function 'makeCacheMatrix'.
+                > cacheSolve(p)
 
-     [,1] [,2]
-[1,] -2.0  1.0
-[2,]  1.5 -0.5
+                #>      [,1] [,2]
+                #> [1,] -2.0  1.0
+                #> [2,]  1.5 -0.5
+
+        ## To check if the values have been calculated correctly, compare the result by directly inverting the example matrix
+                > solve(y)
+
+                #>      [,1] [,2]
+                #> [1,] -2.0  1.0
+                #> [2,]  1.5 -0.5
