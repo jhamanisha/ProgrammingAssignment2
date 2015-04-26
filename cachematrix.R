@@ -1,6 +1,6 @@
 # This function creates a special "matrix" object that can cache its inverse.
 # Note this will work with only square matrices
-# example: y <- matrix(c(1, 2, 3, 4), nrow = 2, ncol = 2, byrow = TRUE)
+# for example: y <- matrix(c(1, 2, 3, 4), nrow = 2, ncol = 2, byrow = TRUE)
 
 makeCacheMatrix <- function(x = matrix()) 
 {
