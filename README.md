@@ -1,4 +1,5 @@
-# Working Example
+## Working Example:
+## Note: Lines starting with `#` are simple comments, lines starting with `#>` are things printed in the output.
 
         ## Take a variable 'y' and assign a square matrix to it.
                 > y <- matrix(c(1, 2, 3, 4), nrow = 2, ncol = 2, byrow = TRUE)
@@ -16,34 +17,34 @@
         ## Print p to check its values. It should provide the user with all the operations available
                 > p
 
-                        $setMatrix
-                        function (y) 
-                        {
-                                x <- y
-                                cache <- NULL
-                        }
-                        <environment: 0x0000000027a27b60>
+                        #> $setMatrix
+                        #> function (y) 
+                        #> {
+                        #>         x <- y
+                        #>         cache <- NULL
+                        #> }
+                        #> <environment: 0x0000000027a27b60>
 
-                        $getMatrix
-                        function () 
-                        {
-                                x
-                        }
-                        <environment: 0x0000000027a27b60>
+                        #> $getMatrix
+                        #> function () 
+                        #> {
+                        #>         x
+                        #> }
+                        #> <environment: 0x0000000027a27b60>
 
-                        $cacheInverseMatrix
-                        function (x) 
-                        {
-                                cache <- solve(x)
-                        }
-                        <environment: 0x0000000027a27b60>
+                        #> $cacheInverseMatrix
+                        #> function (x) 
+                        #> {
+                        #>         cache <- solve(x)
+                        #> }
+                        #> <environment: 0x0000000027a27b60>
 
-                        $getCacheInverseMatrix
-                        function () 
-                        {
-                                cache
-                        }
-                        <environment: 0x0000000027a27b60>
+                        #> $getCacheInverseMatrix
+                        #> function () 
+                        #> {
+                        #>         cache
+                        #> }
+                        #> <environment: 0x0000000027a27b60>
 
         ## Now call the getMatrix sub-function of makeCacheMatrix function
                 > p$getMatrix()
