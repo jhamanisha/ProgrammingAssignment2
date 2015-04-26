@@ -1,5 +1,5 @@
 ## Working Example:
-## Note: Lines starting with `#` are simple comments, lines starting with `#>` are things printed in the output.
+## Note: Lines starting with `##` are simple comments, lines starting with `#>` are things printed in the output.
 
         ## Take a variable 'y' and assign a square matrix to it.
                 > y <- matrix(c(1, 2, 3, 4), nrow = 2, ncol = 2, byrow = TRUE)
